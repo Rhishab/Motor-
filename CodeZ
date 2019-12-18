@@ -1,0 +1,137 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
+int Motor1(inputee){
+    inputee = inputee + 10;
+    return inputee;
+}
+int Motor2(inputee2){
+    inputee2 = inputee2 + 10;
+    return inputee2;
+
+}
+int Motor3(inputee3){
+    inputee3 = inputee3 + 10;
+    return inputee3;
+}
+int Motor4(inputee4){
+    inputee4 = inputee4 + 10;
+    return inputee4;
+}
+int main()
+{
+    int motorVelocity1 = 20;
+    int motorVelocity2 = 20;
+    int motorVelocity3 = 20;
+    int motorVelocity4 = 20;
+    const initV1 = motorVelocity1;
+    const initV2 = motorVelocity2;
+    const initV3 = motorVelocity3;
+    const intiV4 = motorVelocity4;
+    bool againQA = false;
+    char againANS;
+
+
+    int inputUser;
+    do{
+    printf(" Forward : 1 , Back : 3 ; Left : 2; right : 4; \n");
+    scanf("%d",&inputUser);
+     for (int x = 1; x<=5; x++){
+            int xyzz = 0;
+/* First Motor Processing */
+    if(inputUser == 1) {
+
+            if (x ==3) {
+                motorVelocity3 = motorVelocity1 + 10;
+            printf("\n %d %d %d %d\n",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+            }
+             else if (x ==5) {
+                    motorVelocity1 = initV1;
+                    motorVelocity2 = initV2;
+                    motorVelocity3 = initV3;
+                    motorVelocity4 = intiV4;
+                    printf("\n %d %d %d %d\n",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+         }
+            else {
+
+            motorVelocity1 = Motor1(motorVelocity1);
+            printf("%d %d %d %d\n",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+            }
+
+            }
+/* Second Motor Processing */
+
+    else if(inputUser == 2) {
+                        if (x ==3) {
+                motorVelocity4 = motorVelocity2 + 10;
+            printf("\n %d %d %d %d\n",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+            }
+             else if (x ==5) {
+                    motorVelocity1 = initV1;
+                    motorVelocity2 = initV2;
+                    motorVelocity3 = initV3;
+                    motorVelocity4 = intiV4;
+                    printf("\n %d %d %d %d\n",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+         }
+            else {
+
+            motorVelocity2 = Motor2(motorVelocity2);
+            printf("%d %d %d %d\n",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+            }
+    }
+
+/* Third Motor Processing */
+
+else if(inputUser == 3) {
+            if (x ==3) {
+                motorVelocity1 = motorVelocity3 + 10;
+            printf("\n %d %d %d %d\n",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+            }
+             else if (x ==5) {
+                    motorVelocity1 = initV1;
+                    motorVelocity2 = initV2;
+                    motorVelocity3 = initV3;
+                    motorVelocity4 = intiV4;
+                    printf("\n %d %d %d %d\n",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+         }
+            else {
+
+            motorVelocity3 = Motor3(motorVelocity3);
+            printf("%d %d %d %d\n",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+            }
+    }
+    /* Fourth Motor Processing */
+
+else if(inputUser == 4) {
+            if (x ==3) {
+                motorVelocity2 = motorVelocity4 + 10;
+            printf("\n %d %d %d %d\n",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+            }
+             else if (x ==5) {
+                    motorVelocity1 = initV1;
+                    motorVelocity2 = initV2;
+                    motorVelocity3 = initV3;
+                    motorVelocity4 = intiV4;
+                    printf("\n %d %d %d %d\n",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+         }
+            else {
+
+            motorVelocity4 = Motor4(motorVelocity4);
+            printf("%d %d %d %d\n",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+            }
+    }
+     xyzz = xyzz + 1;
+     }
+     printf("Anymore Commands Y/N???");
+     scanf("%s",&againANS);
+     if (againANS = "Y"){
+        againQA = "True";
+     }
+    } while (againQA = false);
+    return 0;
+}
+
+/* 1) Make the motors communicate certain quick information like a spinal cord with
+reflex action does
+2) Make the modules more indipendant .(Basically The Motor module will have full control of the drone motors )                                 */
