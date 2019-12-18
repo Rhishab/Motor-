@@ -128,7 +128,7 @@ else if(inputUser == 4) {
      if (againANS = "Y"){
         againQA = "True";
      }
-    } while (againQA = false);
+    } while (againANS = "Y");
     return 0;
 }
 
