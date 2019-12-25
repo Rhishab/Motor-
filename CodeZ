@@ -134,4 +134,4 @@ else if(inputUser == 4) {
 
 /* 1) Make the motors communicate certain quick information like a spinal cord with
 reflex action does
-2) Make the modules more indipendant .(Basically The Motor module will have full control of the drone motors */                                 */
+2) Make the modules more indipendant .(Basically The Motor module will have full control of the drone motors */                                
